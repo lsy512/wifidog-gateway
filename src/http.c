@@ -74,8 +74,8 @@ http_callback_404(httpd * webserver, request * r, int error_code)
      */
     snprintf(tmp_url, (sizeof(tmp_url) - 1), "http://%s%s%s%s",
              r->request.host, r->request.path, r->request.query[0] ? "?" : "", r->request.query);
-    url = httpdUrlEncode(tmp_url);
-
+   // url = httpdUrlEncode(tmp_url);
+    url="http%3A%2F%2Fwww.adunion.com.cn";
     if (!is_online()) {
         /* The internet connection is down at the moment  - apologize and do not redirect anywhere */
         char *buf;
